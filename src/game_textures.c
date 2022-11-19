@@ -63,7 +63,7 @@ Missing texture filename or invalid entries order.");
 		error_exit(game, 1, "Initialization fail: Invalid texture format");
 	if (img->mlx_img == NULL)
 	{
-		error_exit(game, 1, "Initialization fail: Textures loading");
+		error_exit(game, 1, filename);
 	}
 	img->addr = (int *) mlx_get_data_addr
 		(img->mlx_img, &img->bpp, &img->line_length, &img->endian);
